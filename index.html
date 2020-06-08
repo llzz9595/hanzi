@@ -12,16 +12,7 @@
         var writer = null;
         function show() {
             var x = document.getElementById("name");
-            if(character.length>1){
-               character = character.substring(0,1);
-			}
-
-			//判断是否是汉字
-			var re=/[\u4E00-\u9FA5]/;
-			if (!re.test(character)){
-				$("#msg").text("请输入一个汉字！");
-				return false ;
-			}
+          
             //首次渲染，创建汉字
             if(writer == null){
                 writer = HanziWriter.create('grid-background-target', x.value, {
