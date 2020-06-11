@@ -15,10 +15,11 @@ function updateCharacter() {
 	writer = HanziWriter.create('target', character, {
 		width: 400,
 		height: 400,
-		radicalColor: '#166E16',
+		radicalColor: 'rgb(85,85,85)',
 		onCorrectStroke: printStrokePoints,
 		onMistake: printStrokePoints,
 		showCharacter: false,
+		delayBetweenStrokes: 1500, // milliseconds
 	});
 	isCharVisible = true;
 	isOutlineVisible = true;
@@ -54,4 +55,6 @@ window.onload = function() {
 			showOutline: true
 		});
 	});
+
+
 }
